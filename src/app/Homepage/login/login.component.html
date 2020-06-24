@@ -1,0 +1,79 @@
+
+    <body>
+
+<div class="loginmain">
+  <div class="form-box">
+  <div class="button-box">
+    <div id="btn"></div>
+    <button type="button" class="toggle-btn" (click)="login()">Login</button>
+    <button type="button" class="toggle-btn" (click)="signin()">Sign up</button>
+  </div>
+
+  <form id ="login" (submit)="onlogin(loginForm)" #loginForm="ngForm" class="login-Form">
+        <input  type="text" placeholder="Email Id" class="input-field" name="email" ngModel required="" #emailInput="ngModel">
+        <input type="password"placeholder="Enter Password" class="input-field" name="password" ngModel required=""#passwordInput="ngModel">
+        <span>Forget</span>
+        <button type="submit" class="logbtn">Log in</button>
+  </form>
+
+  <form  id ="signin" (submit)="onsignup(SignupForm)" #SignupForm="ngForm" class="login-Form">
+    <input  type="text" placeholder="Email Id" class="input-field" name="email" ngModel required="" #emailInput="ngModel">
+    <input type="password"placeholder="Enter Password" class="input-field" name="password" ngModel required=""#passwordInput="ngModel">
+
+    <button type="submit" class="logbtn">Sign in</button>
+</form>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+function signin(){
+  var x= document.getElementById("login");
+  var y= document.getElementById("signin");
+  var z= document.getElementById("btn");
+  x.style.left = "-480px";
+  y.style.left = "50px";
+  z.style.left = "110px";
+}
+
+function login(){
+  var x= document.getElementById("login");
+  var y= document.getElementById("signin");
+  var z= document.getElementById("btn");
+  x.style.left = "50px";
+  y.style.left = "450px";
+  z.style.left = "0px";
+}
+
+  </script>
+<!--
+
+            <form (submit)="onsignup(SignupForm)" #SignupForm="ngForm" class="login-Form">
+                <h1>Login</h1>
+                <div  class="txtb">
+                    <input  type="text" name="email" ngModel required="" #emailInput="ngModel">
+                    <span id="email" data-placeholder="Email" ng-mousemove="focus()" ng-blur="blur"></span>
+                </div>
+                <div id="password" class="txtb">
+                    <input type="password" name="password" ngModel required=""#passwordInput="ngModel">
+                    <span data-placeholder="password"></span>
+                </div>
+                <input type="submit" class="logbtn" value="Login">
+                <div class="bottom-text">
+                    Not a member? <a href="#">Sign up</a>
+                </div>
+            </form>
+            <script type="text/javascript">
+
+            $(".txtb input").on("focus",function(){
+                $(this).addClass("focus");
+            });
+
+            $(".txtb input").on("blur",function(){
+                if($(this).val() == "")
+                $(this).removeClass("focus");
+            });
+            </script>
+-->
+    </body>
