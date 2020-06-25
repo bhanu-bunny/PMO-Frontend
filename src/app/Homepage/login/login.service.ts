@@ -31,7 +31,7 @@ login(email:string,password:string){
     const token = response.token
     this.token=token;
     this.authStatusListener.next(true);
-    this.router.navigate(['/PMO/p}rojects'])
+    this.router.navigate(['/PMO/projects'])
   });
 }
 

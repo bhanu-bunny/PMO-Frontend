@@ -9,10 +9,12 @@ import { logininterceptor } from './Homepage/login/login-interceptor';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MainRoutingComponents,
+    
 
 
   ],
