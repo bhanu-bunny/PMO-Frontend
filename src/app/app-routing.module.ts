@@ -26,4 +26,4 @@ const routes: Routes = [
 
 
 export class AppRoutingModule { }
-export const MainRoutingComponents=[HomeComponent,LoginComponent,HeaderComponent,ProjectComponent]
+export const MainRoutingComponents=[HomeComponent,LoginComponent,HeaderComponent,ProjectComponent,BuildingComponent,ProjectHomeComponent]
