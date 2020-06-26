@@ -13,8 +13,11 @@
         <input  type="text" placeholder="Email Id" class="input-field" name="email" ngModel required="" #emailInput="ngModel">
        
         <input type="password"placeholder="Enter Password" class="input-field" name="password" ngModel required=""#passwordInput="ngModel">
-        <span>Forget password?</span>
-        <button type="submit" class="logbtn">Log in</button>
+        
+        
+        <button type="submit" class="logbtn">LOG IN</button>
+
+        <span></span>
   </form>
 
   <form  id ="signin" (submit)="onsignup(SignupForm)" #SignupForm="ngForm" class="login-Form">
@@ -22,7 +25,9 @@
     <input type="password"placeholder="Enter Password" class="input-field" name="password" ngModel required=""#passwordInput="ngModel">
 
     <button type="submit" class="logbtn">Sign in</button>
+     
 </form>
+
 
 
   </div>

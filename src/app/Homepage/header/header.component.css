@@ -9,12 +9,14 @@ padding: 0;
 {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 0;
 }
 .navbar-brand img
 {
-    height: 40px;
-    padding-left: 30px;
+    height: 32px;
+    padding-left: 825px;
+    background: transparent;
+    
 }
 .navbar-nav li
 {
@@ -38,8 +40,11 @@ text-align: left;
 }
 .nav-link{
     color: #555!important;
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
+    
+    font-weight:bolder;
+    letter-spacing: 1px;
+    font-family: kanit;
 }
 
 /*---searchbox--*/
@@ -47,7 +52,7 @@ text-align: left;
 .search-box{
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 10%;
     transform: translate(-50%,-50%);
     background: lightgrey;
     height: 30px;
