@@ -4,20 +4,39 @@
         <h1>Project Data Model</h1>
       </div>
   
-     <form #F="ngForm" (ngSubmit)="Towernames(F)" class="TowersForm">
+     <form #towerForm="ngForm" (ngSubmit)="Towernames(towerForm)" class="TowersForm">
       <div class="city-item">
         <p>No of Towers</p>
-        <input type="text" name="TowerNo" ngModel placeholder="No of Towers" required="" >
+        <input id="TowerNo" type="number" name="TowerNo" ngModel placeholder="No of Towers" required="" #TowerNo="ngModel" >
         <p>No of Basements</p>
-        <input type="text" name="BasementNo" ngModel placeholder="No of Basements"  required="" >
+        <input id="BasementNo" type="number" name="BasementNo" ngModel placeholder="No of Basements"  required="" #BasementNo="ngModel">
         <p>No of Floors</p>
-        <input type="text" name="FloorNo" placeholder="No of Floors" required="" >
+        <input id="FloorNo" type="number" name="FloorNo" ngModel placeholder="No of Floors" required="" #FloorNo="ngModel" >
         <button type="submit">Submit</button>
         </div>
      </form>
+    <!--
+     <input type="checkbox" (change)="selectedtowername($event)"id="towernocheckbox" >
+     <input type="checkbox" (change)="selectedtowername($event)" id="toweraplhacheckbox" >
+     <input type="checkbox" (change)="selectedtowername($event)" id="newElementIdcheckbox" >
+     -->
+     <span id="towerno" class="a">
+     <li *ngFor="let towerno of  TowersnameNo">
+      {{ towerno }}
+     </li>
+     </span>
 
+   <span  id="toweraplha"class="a">
+    <li *ngFor="let toweraplha of  Towersnamealpha">
+      {{ toweraplha }}
+    </li>
+  </span>
 
-
+  <span>
+    <div id="newElementId"></div>
+  
+  </span>
+  <button (click)="selectedtowername()">click</button>
 </form>
 
 
