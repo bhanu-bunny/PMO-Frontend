@@ -24,6 +24,7 @@ html, body {
     height: inherit;
     padding: 20px;
     }
+   
     .TreeForm {
     width: 100%;
     padding: 20px;
@@ -59,4 +60,10 @@ html, body {
     .city-item{
         display: inline;
        
+    }
+    
+    span .a{
+     display: inline-block;
+     
+     
     }
