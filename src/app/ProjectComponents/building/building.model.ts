@@ -1,4 +1,9 @@
-export interface entity{
-    name:string
+
+export interface Entity{
+
+  project: string,
+  entityname:string,
+  entitycode: string
+
   }
   
