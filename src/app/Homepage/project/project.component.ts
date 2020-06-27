@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{ NgForm }  from '@angular/forms'
+import{ProjectService  } from './Project.service';
 
 @Component({
   selector: 'app-project',
@@ -7,13 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(public Projectservice:ProjectService) { }
 
   ngOnInit(): void {
 
   }
+ projectcreated(form:NgForm){
+  
+   this.Projectservice.createproject(form.value.name)
+ }
 
+ refreshProjectList() {
+  this.Projectservice.getprojects()
+  //  this.Projectservice.employees = res as Employee[];
 
+}
 
 }
 

@@ -49,10 +49,10 @@ document.getElementById("newElementId").appendChild(txtNewInputBox);
 
 
 selectedtowername(){
-  var aa=this.TowersnameNo.values()
-  for (let elements of aa) { 
-
-  this.buildingservice.createEntity(elements);
+  var aa=this.Towersnamealpha.values()
+  for (let name of aa) { 
+console.log(name)
+  //this.buildingservice.createEntity(n)
   }
 };
 
