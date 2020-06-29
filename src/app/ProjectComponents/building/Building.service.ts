@@ -19,5 +19,5 @@ createEntity(Project:string,EntityName:string,EntityCode:string){
       console.log(response)
     });
   }
-  
+
 }

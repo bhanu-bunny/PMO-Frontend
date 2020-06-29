@@ -9,3 +9,13 @@
 
     <span></span>
 </form>
+<tr *ngFor="let prj of Projectservice.projects">
+    <button routerLink="../building" (click)="projectselected(prj._id)">{{prj.name}}</button>
+    
+    
+    <a class="action-btn" >
+        <i class="material-icons">edit</i>
+      </a>
+      <a class="action-btn" >
+        <i class="material-icons">delete</i>
+      </a></tr>

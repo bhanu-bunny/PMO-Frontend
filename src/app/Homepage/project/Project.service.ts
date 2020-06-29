@@ -5,18 +5,20 @@ import{ HttpClient } from "@angular/common/http";
 
 import { Router } from '@angular/router';
 
-import{Project} from './project.model';
+import{Projects} from './project.model';
+
 
 @Injectable({ providedIn: "root" })
 export class ProjectService{
 
-    SelectedProject:Project
+    SelectedProject:Projects;
+    projects:Projects[];
 constructor (private http: HttpClient,private router:Router){}
 
 
-createproject(name:string){
+createproject(name:string,_id:string){
     
-  const projectname : Project = {name:name}
+  const projectname : Projects = {name:name,_id:_id}
     this.http.post("http://localhost:3000/Project/",projectname).subscribe(response=>{
       console.log(response)
     });
@@ -25,6 +27,11 @@ createproject(name:string){
   getprojects(){
       this.http.get("http://localhost:3000/Project/").subscribe(response=>{
         console.log(response)
+        this.projects= response as Projects[]
+        
+      
       });
   }
+
+
 }

@@ -1,3 +1,5 @@
-export interface Project{
-    name:string
+export interface Projects{
+    _id: string;
+    name:string;
+
 }
